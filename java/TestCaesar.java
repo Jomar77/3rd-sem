@@ -11,7 +11,7 @@ public class TestCaesar {
         c.encrypt();
 
         System.out.println("plaintext: " + c.getPlaintext());
-        
+
         CaesarCIpher c2 = new CaesarCIpher("hello world", 4);
         c2.encrypt();
         System.out.println("Ciphertext: " + c2.getCiphertext());
@@ -35,22 +35,22 @@ public class TestCaesar {
         System.out.print("Type shift\t: ");
         int key = s.nextInt();
         if(isAlpha(plaintext))
-            System.out.println("Ciphertext \t: " + c5.encryptS(plaintext, key)); 
+            System.out.println("Ciphertext \t: " + c5.encryptS(plaintext, key));
         else{
             System.err.println("Plaintext must be alphabetic");
             System.exit(0);
         }
-        
+
 
     try{
         PrintStream t = new PrintStream(new FileOutputStream("HiddenMessage.txt"));
         t.println(c5.getCiphertext());
         t.close();
-        System.out.println("Storing to a file HiddenMessage.txt"); 
+        System.out.println("Storing to a file HiddenMessage.txt");
 
         File file = new File("HiddenMessage.txt");
         Scanner sc = new Scanner(file);
- 
+
         while (sc.hasNextLine())
             System.out.println("Message \t: " +c5.decrypt(sc.nextLine(), key));
     }
@@ -59,12 +59,12 @@ public class TestCaesar {
     }
     }
 
-    
+
     public static boolean isAlpha(String s) {
         if (s == null) {
             return false;
         }
- 
+
         for (int i = 0; i < s.length(); i++)
         {
             char c = s.charAt(i);
