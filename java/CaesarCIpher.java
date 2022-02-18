@@ -37,7 +37,8 @@ public class CaesarCIpher{
                 ch -= 26;
             }
             ciphertext = ciphertext + (char)ch;
-        }        
+        }      
+         
     }
 
     public String decrypt(){
@@ -72,8 +73,8 @@ public class CaesarCIpher{
             if (ch > 'z') {
                 ch -= 26;
             }
-            ciphertext = ciphertext + (char)ch;
-    }
+            ciphertext += (char)ch;
+        }
     return ciphertext;
     }
     public void setKey(int key){
@@ -92,5 +93,5 @@ public class CaesarCIpher{
         this.ciphertext = ciphertext;
     }
 
-    
+
 }
