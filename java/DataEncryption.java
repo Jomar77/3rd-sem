@@ -2,14 +2,15 @@ public class DataEncryption{
     public static void main(String[] args) {
        DataEncryption de = new DataEncryption();
        int key = 4;
-       String plainttext = "hello world";
+       String plainttext = "malayan";
 
        String ciphertext = de.encrypt(plainttext, key);
-       System.out.println("plaintext: " + plainttext);
-       System.out.println("Ciphertext: " + ciphertext);
-       System.out.println("plaintext: " + de.decrypt(ciphertext, key));
-       System.out.println("plaintext: " + de.decryptNew(ciphertext, key));
-       System.out.println("ciphertext: " + de.encryptNew(plainttext, key));
+       System.out.println("plaintext\t: " + plainttext);
+       System.out.println("Ciphertext\t: " + ciphertext);
+       System.out.println("plaintext\t: " + de.decrypt(ciphertext, key));
+
+       System.out.println("\nciphertext\t: " + de.encryptNew(plainttext, key));
+       System.out.println("plaintext\t: " + de.decryptNew(ciphertext, key));
     }
     public String encrypt(String plainText, int key) {
         String ciphertext = "";

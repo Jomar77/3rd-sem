@@ -9,5 +9,10 @@ class letter:
         self.line = "Dear " + self.letterFrom + ":\n\n" + \
             line + "\n\nSincerely, \n\n" + self.letterTo
 
+    def getLetter(self):
+        return self.letter
+    
+    
+
     def getText(self):
         return self.line
