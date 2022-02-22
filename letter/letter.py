@@ -1,18 +1,20 @@
+class Letter:
 
-class letter:
+    def __init__ (self, letterFrom, letterTo):
+        self._letterFrom = letterFrom
+        self._letterTo = letterTo
+        self._body = []
 
-    def __init__(self, letterFrom, letterTo):
-        self.letterFrom = letterFrom
-        self.letterTo = letterTo
 
     def addLine(self, line):
-        self.line = "Dear " + self.letterFrom + ":\n\n" + \
-            line + "\n\nSincerely, \n\n" + self.letterTo
+        self._body.append(line) 
 
-    def getLetter(self):
-        return self.letter
-    
-    
 
     def getText(self):
-        return self.line
+        text = "Dear " + self._letterTo + ",\n\n"
+        for line in self._body:
+            text += line + "\n"
+        text += "\nSincerely,\n\n" + self._letterFrom
+        return text
+
+        
