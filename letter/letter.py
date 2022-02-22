@@ -5,10 +5,8 @@ class Letter:
         self._letterTo = letterTo
         self._body = []
 
-
     def addLine(self, line):
         self._body.append(line) 
-
 
     def getText(self):
         text = "Dear " + self._letterTo + ",\n\n"
@@ -16,5 +14,3 @@ class Letter:
             text += line + "\n"
         text += "\nSincerely,\n\n" + self._letterFrom
         return text
-
-        

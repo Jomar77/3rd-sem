@@ -9,6 +9,4 @@ l = Letter(fro, to)
 l.addLine(line1)
 l.addLine(line2)
 
-
-
 print(l.getText())
