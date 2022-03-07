@@ -9,3 +9,8 @@ frac5 = Fraction(0, 15) # Stored as 0/1
 
 for i in range (1, 6):
     print(i, ":", eval("frac" + str(i)))
+
+if frac1 == frac2 : # Calls frac1._ _eq_ _(frac2)
+    print("The fractions are equal.")
+
+print(float(frac1))

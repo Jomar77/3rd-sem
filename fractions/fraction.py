@@ -19,3 +19,4 @@ def __init__(self, numerator=0, denominator=1):
         b = tempA % tempB
     self._numerator = abs(numerator) # b * sign
     self._denominator = abs(denominator)
+
