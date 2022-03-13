@@ -30,6 +30,6 @@ class choiceQuestion(Question):
     def  display(self) :
         super().displayPrompt()
 
-        for  i  in  range(len(self._choices())): 
+        for  i  in  range(len(self._choices)): 
             choiceNumber  =  i  +  1 
             print("%d:  %s"  %  (choiceNumber, self._choices[i]))
