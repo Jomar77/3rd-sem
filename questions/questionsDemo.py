@@ -11,30 +11,16 @@ def main():
     second = choiceQuestion()
     second.setText("What is the capital of Germany?")
     second.addChoice("Paris", False)
-    second.addChoice("Madrid", False)
-    second.addChoice("Berlin", True)
     second.addChoice("London", False)
+    second.addChoice("Berlin", True)
+    second.addChoice("Madrid", False)
 
     third = choiceQuestion()
-    third.setText("What is the capital of Italy?")
+    third.setText("What is the capital of Spain?")
     third.addChoice("Paris", False)
-    third.addChoice("Rome", True)
     third.addChoice("London", False)
-    third.addChoice("Washington", False)
+    third.addChoice("Berlin", False)
     
-
-    fourth = choiceQuestion()
-    fourth.setText("What is the capital of Spain?")
-    fourth.addChoice("Paris", False)
-    fourth.addChoice("Berlin", False)
-    fourth.addChoice("Madrid", True)
-    fourth.addChoice("London", False)
-
-    fifth = choiceQuestion()
-    fifth.setText("What is the capital of the United States?")
-    fifth.addChoice("Paris", False)
-    fifth.addChoice("Washington", True)
-    fifth.addChoice("London", False)
     fifth.addChoice("Berlin", False)
 
     questions = [first, second, third, fourth, fifth]

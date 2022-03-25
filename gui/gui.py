@@ -1,16 +1,33 @@
-from tkinter import Canvas, Label, Tk, PhotoImage
-
-
+from tkinter import *
+import time
+import os
 root = Tk()
-root.title("tk")
 
-canvas = Canvas(root, width=400, height=400)
+frameCnt = 30
+frames = [PhotoImage(file='images/giphy.gif',format = 'gif -index %i' %(i)) for i in range(frameCnt)]
 
-gif = PhotoImage(file="images/giphy.gif")
-gif_lbl = Label(root, image=gif)
-gif_lbl.grid (row=0, column=0)
+text = Label(
+    root,
+    font = ("Calibri", 25, "bold"),
+    foreground = "orange",
+    background = "blue",
+    text = "Jhon Louise Tan \n General Santos City, April 2001"
+)
 
-text =  Label(text="Jomar A. Nacorda\n Davao City, April 13,2003", pady=10, padx=10, bg="light blue", fg="orange red", font=("Arial", 12))
-text.grid(row=0, column=1)
+text.pack(side=RIGHT)
+
+def update(ind):
+
+    frame = frames[ind]
+    ind += 1
+    if ind == frameCnt:
+        ind = 0
+    label.configure(image=frame)
+    root.after(100, update, ind)
+
+
+label = Label(root)
+label.pack(side=LEFT)
+root.after(0, update, 0)
 
 root.mainloop()
