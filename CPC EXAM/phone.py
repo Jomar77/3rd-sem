@@ -80,3 +80,9 @@ for j in range(2, 6):
         i += 1
 
 root.mainloop()
+
+'''
+Jomar A. Nacorda
+Hannah Gwyneth Valeroso
+Jaye Martin Chan
+'''
