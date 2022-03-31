@@ -82,7 +82,12 @@ for j in range(2, 6):
 root.mainloop()
 
 '''
+Contributed:
 Jomar A. Nacorda
 Hannah Gwyneth Valeroso
 Jaye Martin Chan
+
+Did not contribute:
+Neph Ricard E. Arancon Jr.
+Chass Clayton C. Estomo
 '''
